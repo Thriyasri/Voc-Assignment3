@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #c3cfe2, #e2eafc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+  backdrop-filter: blur(6px); /* optional glassy effect */
+}
+
+
+.container:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+header h1 span {
+  color: #6c63ff;
+}
+
+input[type="email"] {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* soft shadow */
+}
+input[type="email"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px #6c63ff66;
+}
+
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3); /* button glow */
+}
+button:hover {
+  background-color: #574dcf;
+  box-shadow: 0 8px 25px rgba(87, 77, 207, 0.4);
+}
+
+
+#result {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.verifying {
+  color: #ffd700;
+  font-size: 18px;
+  animation: pulse 1s infinite;
+}
+
+.success {
+  color: #4caf50;
+  animation: fadeIn 0.6s ease;
+}
+
+.error {
+  color: #f44336;
+  animation: fadeIn 0.6s ease;
+}
+
+.warning {
+  color: orange;
+  font-style: italic;
+  animation: fadeIn 0.6s ease;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
